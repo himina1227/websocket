@@ -1,11 +1,11 @@
 spring:
   application:
     name: websocket
-  port: 9999
   datasource:
     driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
     url: jdbc:log4jdbc:mariadb://127.0.0.1:3306/eigdb
     username: root
+    password: eig7582!
   jpa:
     show-sql: false
     properties:
@@ -13,3 +13,21 @@ spring:
         dialect: org.hibernate.dialect.MariaDB103Dialect
     hibernate:
       ddl-auto: none
+
+server:
+  port: 9999
+
+---
+spring:
+  config:
+    activate:
+      on-profile: local
+---
+spring:
+  config:
+    activate:
+      on-profile: devel
+
+server:
+  port: 9988
+
