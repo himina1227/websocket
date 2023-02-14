@@ -13,7 +13,9 @@ spring:
         dialect: org.hibernate.dialect.MariaDB103Dialect
     hibernate:
       ddl-auto: none
-
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
 server:
   port: 9999
 

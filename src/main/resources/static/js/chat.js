@@ -1,7 +1,7 @@
-alert("aabb");
 $(document).ready(function(){
-
-    const username = [[${#authentication.principal.username}]];
+    alert("Aaa");
+//    const username = [[${#authentication.principal.username}]];
+    const username = "김낙겸";
 
     $("#disconn").on("click", (e) => {
         disconnect();
@@ -11,7 +11,7 @@ $(document).ready(function(){
         send();
     });
 
-    const websocket = new WebSocket("ws://localhost:8080/ws/chat");
+    const websocket = new WebSocket("ws://localhost:9999/ws/chat");
 
     websocket.onmessage = onMessage;
     websocket.onopen = onOpen;
